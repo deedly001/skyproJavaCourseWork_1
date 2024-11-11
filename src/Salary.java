@@ -1,2 +1,2 @@
-public class Salary { 
+public class Salary {
 }
