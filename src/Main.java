@@ -1,33 +1,32 @@
 public class Main {
 
   public static void main(String[] args) {
-    Engine employee = new Engine();
-    Engine.setEmployees(new Employee("Sergey", 1, 100000));
-    Engine.setEmployees(new Employee("Artem", 2, 100000));
-    Engine.setEmployees(new Employee("Petr", 3, 140000));
-    Engine.setEmployees(new Employee("Anna", 4, 100000));
-    Engine.setEmployees(new Employee("Pavel", 1, 100000);
-    Engine.setEmployees(new Employee("Lena", 1, 100000));
-    Engine.setEmployees(new Employee("Anna", 4, 100000));
-    Engine.setEmployees(new Employee("Bell", 3, 280000));
-    Engine.setEmployees(new Employee("Yana", 1, 90000));
-    Engine.setEmployees(new Employee("Alex", 5, 220000));
-
-    Employee.getAll(employees);
-    Employee.getSummSalary(employees);
-    Employee.getMinSalary(employees);
-    Employee.getMaxSalary(employees);
-    Employee.getAverSalary(employees);
-    Employee.getAllFIO(employees);
-    Employee.setIncreaseSalary(2, employees);
-    Employee.getDepartmentMinSalary(3, employees);
-    Employee.getDepartmentMaxSalary(1, employees);
-    Employee.getDepartmentSalary(1, employees);
-    Employee.getDepartmentAverSalary(2, employees);
-    Employee.setDepartmentSalaryIncrease(2, 3, employees);
-    Employee.getAllEmployeesFromDept(2, employees);
-    Employee.getEmployeesSalaryLessFilter(100000, employees);
-    Employee.getEmployeesSalaryMoreFilter(200000, employees);
+    EmployeesEngine employee = new EmployeesEngine();
+    EmployeesEngine.setEmployees(new Employee("Sergey", 1, 100000));
+    EmployeesEngine.setEmployees(new Employee("Artem", 2, 100000));
+    EmployeesEngine.setEmployees(new Employee("Petr", 3, 140000));
+    EmployeesEngine.setEmployees(new Employee("Anna", 4, 100000));
+    EmployeesEngine.setEmployees(new Employee("Pavel", 1, 100000));
+    EmployeesEngine.setEmployees(new Employee("Lena", 1, 100000));
+    EmployeesEngine.setEmployees(new Employee("Anna", 4, 100000));
+    EmployeesEngine.setEmployees(new Employee("Bell", 3, 280000));
+    EmployeesEngine.setEmployees(new Employee("Yana", 1, 90000));
+    EmployeesEngine.setEmployees(new Employee("Alex", 5, 220000));
+    EmployeesEngine.getAllEmployees();
+    EmployeesEngine.getSummSalary();
+    EmployeesEngine.getMinSalary();
+    EmployeesEngine.getMaxSalary();
+    EmployeesEngine.getAverSalary();
+    EmployeesEngine.getAllFIO();
+    EmployeesEngine.setIncreaseSalary(2);
+    EmployeesEngine.getDepartmentMinSalary(3);
+    EmployeesEngine.getDepartmentMaxSalary(1);
+    EmployeesEngine.getDepartmentSalary(1);
+    EmployeesEngine.getDepartmentAverSalary(2);
+    EmployeesEngine.setDepartmentSalaryIncrease(2, 3);
+    EmployeesEngine.getAllEmployeesFromDept(2);
+    EmployeesEngine.getEmployeesSalaryLessFilter(100000);
+    EmployeesEngine.getEmployeesSalaryMoreFilter(200000);
 
   }
 }
