@@ -1,6 +1,5 @@
-import java.util.Arrays;
-
 public class Main {
+
   public static void main(String[] args) {
     Employee[] employees = new Employee[10];
     employees[0] = new Employee("Sergey", 1, 100000);
@@ -19,5 +18,15 @@ public class Main {
     Employee.getMaxSalary(employees);
     Employee.getAverSalary(employees);
     Employee.getAllFIO(employees);
+    Employee.setIncreaseSalary(2, employees);
+    Employee.getDepartmentMinSalary(3, employees);
+    Employee.getDepartmentMaxSalary(1, employees);
+    Employee.getDepartmentSalary(1, employees);
+    Employee.getDepartmentAverSalary(2, employees);
+    Employee.setDepartmentSalaryIncrease(2, 3, employees);
+    Employee.getAllEmployeesFromDept(2, employees);
+    Employee.getEmployeesSalaryLessFilter(100000, employees);
+    Employee.getEmployeesSalaryMoreFilter(200000, employees);
+
   }
 }
