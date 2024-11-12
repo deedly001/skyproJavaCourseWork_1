@@ -45,7 +45,7 @@ public class Employee {
         ", id - " + id;
   }
 
-  public String getName() {
+  public String getFullName() {
     return FullName;
   }
 
