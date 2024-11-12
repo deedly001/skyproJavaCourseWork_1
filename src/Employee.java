@@ -1,3 +1,5 @@
+import java.util.Objects;
+
 public class Employee {
 
   private static int Counter = 1;
@@ -33,7 +35,6 @@ public class Employee {
     }
     System.out.println("Сумма затрат на ЗП в месяц: " + summ + " т.р.");
   }
-
 
   public static void getMinSalary(Employee[] employee) {
     System.out.println(" Найти сотрудника с минимальной ЗП:");
@@ -200,6 +201,22 @@ public class Employee {
     }
   }
 
+  @Override
+  public boolean equals(Object o) {
+    if (this == o) {
+      return true;
+    }
+    if (!(o instanceof Employee employee)) {
+      return false;
+    }
+    return department == employee.department && salary == employee.salary && id == employee.id
+        && Objects.equals(FIO, employee.FIO) && (this.hashCode() == o.hashCode());
+  }
+
+  @Override
+  public int hashCode() {
+    return Objects.hash(FIO, department, salary, id);
+  }
 
   @Override
   public String toString() {
