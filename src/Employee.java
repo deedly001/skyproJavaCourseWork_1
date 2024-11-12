@@ -118,15 +118,15 @@ public class Employee {
   }
 
   public static void getDepartmentMaxSalary(int department, Employee[] employee) {
-    System.out.println("Найти сотрудника с минимальной ЗП:");
+    System.out.println("Найти сотрудника с наибольшей ЗП:");
     String workerFIO = "";
     int workerId = 0;
-    int minSalary = 0;
+    int maxSalary = 0;
     int workerDepartment = 0;
     for (int i = 0; i < employee.length; i++) {
       if (employee[i].getDepartment() == department) {
-        if (employee[i].getSalary() > minSalary) {
-          minSalary = employee[i].getSalary();
+        if (employee[i].getSalary() > maxSalary) {
+          maxSalary = employee[i].getSalary();
           workerFIO = employee[i].getName();
           workerId = employee[i].getId();
           workerDepartment = employee[i].getDepartment();
@@ -134,9 +134,9 @@ public class Employee {
       }
     }
     System.out.println(
-        "Самая большая зп у сотрудника " + workerFIO + " с Id " + workerId + " из отдела "
+        "Самая наибольшая зп у сотрудника " + workerFIO + " с Id " + workerId + " из отдела "
             + workerDepartment + " и зарплатой "
-            + minSalary);
+            + maxSalary);
   }
 
   public static void getDepartmentSalary(int department, Employee[] employee) {
@@ -162,6 +162,8 @@ public class Employee {
   }
 
   public static void setDepartmentSalaryIncrease(int department, int percent, Employee[] employee) {
+    System.out.println(
+        "Проиндексировать зарплату всех сотрудников отдела на процент, который приходит в качестве параметра");
     for (int i = 0; i < employee.length; i++) {
       if (employee[i].getDepartment() == department) {
         employee[i].setSalary(employee[i].getSalary() + (employee[i].getSalary() / 100) * percent);
@@ -171,6 +173,7 @@ public class Employee {
   }
 
   public static void getAllEmployeesFromDept(int department, Employee[] employee) {
+    System.out.println("Напечатать всех сотрудников отдела (все данные, кроме отдела).");
     for (int i = 0; i < employee.length; i++) {
       if (employee[i].getDepartment() == department) {
         System.out.println(
@@ -181,6 +184,7 @@ public class Employee {
   }
 
   public static void getEmployeesSalaryLessFilter(int num, Employee[] employee) {
+    System.out.println("Всех сотрудников с зп меньше числа (распечатать id, фио и зп в консоль)");
     for (int i = 0; i < employee.length; i++) {
       if (employee[i].getSalary() < num) {
         System.out.println(
@@ -192,6 +196,8 @@ public class Employee {
   }
 
   public static void getEmployeesSalaryMoreFilter(int num, Employee[] employee) {
+    System.out.println(
+        "Всех сотрудников с зп больше (или равно) числа (распечатать id, фио и зп в консоль)");
     for (int i = 0; i < employee.length; i++) {
       if (employee[i].getSalary() >= num) {
         System.out.println(
