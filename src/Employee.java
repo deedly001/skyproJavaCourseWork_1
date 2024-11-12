@@ -15,6 +15,7 @@ public class Employee {
     this.id = Counter++;
   }
 
+
   public static int getCounter() {
     return Counter;
   }
