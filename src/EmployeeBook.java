@@ -19,6 +19,7 @@ public class EmployeeBook {
     }
   }
 
+
   public void getSumSalary() {
     System.out.println("Посчитать сумму затрат на ЗП:");
     int summ = 0;
