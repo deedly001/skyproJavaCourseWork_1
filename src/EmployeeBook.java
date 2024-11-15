@@ -2,7 +2,7 @@ public class EmployeeBook {
 
   private static final Employee[] employees = new Employee[10];
 
-  public static void setEmployees(Employee employee) {
+  public void setEmployees(Employee employee) {
     for (int i = 0; i < employees.length; i++) {
       if (employees[i] == null) {
         employees[i] = employee;
@@ -11,7 +11,7 @@ public class EmployeeBook {
     }
   }
 
-  public static void getAllEmployees() {
+  public void getAllEmployees() {
     System.out.println("Получить список всех сотрудников:");
     for (Employee employee : employees) {
       System.out.println(
@@ -19,7 +19,7 @@ public class EmployeeBook {
     }
   }
 
-  public static void getSumSalary() {
+  public void getSumSalary() {
     System.out.println("Посчитать сумму затрат на ЗП:");
     int summ = 0;
     for (Employee employee : employees) {
@@ -28,7 +28,7 @@ public class EmployeeBook {
     System.out.println("Сумма затрат на ЗП в месяц: " + summ + " т.р.");
   }
 
-  public static void getMinSalary() {
+  public void getMinSalary() {
     System.out.println(" Найти сотрудника с минимальной ЗП:");
     String workerFIO = "";
     int workerId = 0;
@@ -46,7 +46,7 @@ public class EmployeeBook {
             + minSalary);
   }
 
-  public static void getMaxSalary() {
+  public void getMaxSalary() {
     System.out.println("Найти сотрудника с максимальной ЗП:");
     String workerFIO = "";
     int workerId = 0;
@@ -63,7 +63,7 @@ public class EmployeeBook {
             + maxSalary);
   }
 
-  public static void getAverSalary() {
+  public void getAverSalary() {
     System.out.println("Подсчитать среднее значение зарплат:");
     int summ = 0;
     for (Employee employee : employees) {
@@ -72,14 +72,14 @@ public class EmployeeBook {
     System.out.println("Сумма затрат на ЗП в месяц: " + summ + " т.р.");
   }
 
-  public static void getAllFIO() {
+  public void getAllFIO() {
     System.out.println("Получить список всех сотрудников:");
     for (Employee employee : employees) {
       System.out.println(employee.getFullName());
     }
   }
 
-  public static void setIncreaseSalary(int percent) {
+  public void setIncreaseSalary(int percent) {
     System.out.println("Увеличение зп всех сотрудников на " + percent + " %");
     for (Employee employee : employees) {
       employee.setSalary(
@@ -88,7 +88,7 @@ public class EmployeeBook {
     getAllEmployees();
   }
 
-  public static void getEmployeeById(int id) {
+  public void getEmployeeById(int id) {
     System.out.println("Поиск сотрудника по ид:");
     for (Employee employee : employees) {
       if (employee.getId() == id) {
@@ -97,7 +97,7 @@ public class EmployeeBook {
     }
   }
 
-  public static void getDepartmentMinSalary(int department) {
+  public void getDepartmentMinSalary(int department) {
     System.out.println("Найти сотрудника с минимальной ЗП:");
     String workerFIO = "";
     int workerId = 0;
@@ -119,7 +119,7 @@ public class EmployeeBook {
             + minSalary);
   }
 
-  public static void getDepartmentMaxSalary(int department) {
+  public void getDepartmentMaxSalary(int department) {
     System.out.println("Найти сотрудника с наибольшей ЗП:");
     String workerFIO = "";
     int workerId = 0;
@@ -141,7 +141,7 @@ public class EmployeeBook {
             + maxSalary);
   }
 
-  public static void getDepartmentSalary(int department) {
+  public void getDepartmentSalary(int department) {
     System.out.println("Найти сумму затрат на зп по отделу: ");
     int departmentSalary = 0;
     for (Employee employee : employees) {
@@ -152,7 +152,7 @@ public class EmployeeBook {
     System.out.println("Сумма затрат на зп по отделу: " + department + " = " + departmentSalary);
   }
 
-  public static void getDepartmentAverSalary(int department) {
+  public void getDepartmentAverSalary(int department) {
     System.out.println("Найти среднюю зп по отделу: ");
     int averageSalary = 0;
     for (Employee employee : employees) {
@@ -163,7 +163,7 @@ public class EmployeeBook {
     System.out.println("Средняя зп по отделу " + department + " = " + averageSalary);
   }
 
-  public static void setDepartmentSalaryIncrease(int department, int percent) {
+  public void setDepartmentSalaryIncrease(int department, int percent) {
     System.out.println(
         "Проиндексировать зарплату всех сотрудников отдела на процент, который приходит в качестве параметра:");
     for (Employee employee : employees) {
@@ -175,7 +175,7 @@ public class EmployeeBook {
     getAllEmployees();
   }
 
-  public static void getAllEmployeesFromDept(int department) {
+  public void getAllEmployeesFromDept(int department) {
     System.out.println("Напечатать всех сотрудников отдела (все данные, кроме отдела):");
     for (Employee employee : employees) {
       if (employee.getDepartment() == department) {
@@ -186,7 +186,7 @@ public class EmployeeBook {
     }
   }
 
-  public static void getEmployeesSalaryLessFilter(int num) {
+  public void getEmployeesSalaryLessFilter(int num) {
     System.out.println("Всех сотрудников с зп меньше числа (распечатать id, фио и зп в консоль):");
     for (Employee employee : employees) {
       if (employee.getSalary() < num) {
@@ -196,7 +196,7 @@ public class EmployeeBook {
     }
   }
 
-  public static void getEmployeesSalaryMoreFilter(int num) {
+  public void getEmployeesSalaryMoreFilter(int num) {
     System.out.println(
         "Всех сотрудников с зп больше (или равно) числа (распечатать id, фио и зп в консоль):");
     for (Employee employee : employees) {
@@ -208,7 +208,7 @@ public class EmployeeBook {
   }
 
 
-  public static boolean isNull() {
+  public boolean isNull() {
     boolean result = false;
     for (Employee employee : employees) {
       if (employee == null) {
@@ -219,7 +219,7 @@ public class EmployeeBook {
     return result;
   }
 
-  public static void createEmployee(Employee employee) {
+  public void createEmployee(Employee employee) {
     System.out.println("Создать сотрудника:");
     if (isNull()) {
       for (int i = 0; i < employees.length; i++) {
@@ -231,7 +231,7 @@ public class EmployeeBook {
     }
   }
 
-  public static void removeEmployee(String FullName) {
+  public void removeEmployee(String FullName) {
     System.out.println("Удалить сотрудника:");
     for (int i = 0; i < employees.length; i++) {
       if (employees[i].getFullName().equals(FullName)) {

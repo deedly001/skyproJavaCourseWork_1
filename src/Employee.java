@@ -15,7 +15,7 @@ public class Employee {
     this.id = Counter++;
   }
 
-  public static int getCounter() {
+  public int getCounter() {
     return Counter;
   }
 
@@ -76,7 +76,5 @@ public class Employee {
   public void setId(int id) {
     this.id = id;
   }
-
-
 }
 
