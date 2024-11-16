@@ -27,8 +27,8 @@ public class Main {
     employee.getAllEmployeesFromDept(2);
     employee.getEmployeesSalaryLessFilter(100000);
     employee.getEmployeesSalaryMoreFilter(200000);
-    employee.removeEmployee("Alex");
+    employee.removeEmployee(7);
     employee.createEmployee(new Employee("Fedor", 2, 330000));
-    employee.getEmployeeById(7);
+    employee.getEmployeeById(8);
   }
 }
